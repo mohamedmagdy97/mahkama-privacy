@@ -25,13 +25,15 @@ a{color:var(--gold)}
 <h1>Mahkama</h1>
 <p class="sub">Who Did It? · MegTech</p>
 <h2>Privacy Policy</h2>
-<p>Last updated: 23 October 2026</p>
+<p>Last updated: 28 October 2026</p>
 <h2>In short</h2>
-<p>Mahkama is a party detective game. The app <strong>does not collect any personal data</strong>. There are no accounts, no ads and no tracking. What connects to the internet: the update check, the optional notifications, and anonymous statistics you can turn off (details below).</p>
+<p>Mahkama is a party detective game. The app <strong>does not collect any personal data</strong>. There are no accounts, no ads and no tracking. What connects to the internet: the update check, downloading new cases, the optional notifications, anonymous statistics and technical crash reports that you can turn off in Settings, and store purchases if you buy something (details below).</p>
 <h2>What is stored on your device?</h2>
 <p>Everything below is stored on your device only and is never sent anywhere:</p>
 <ul>
-<li>App settings: theme (dark/light), sound and haptics, default play style, interrogation time, larger text, keep-screen-on, and read-aloud.</li>
+<li>App settings: theme (dark/light), sound and haptics, default play style, interrogation time, larger text, keep-screen-on, read-aloud, and your crash-report choice.</li>
+<li><strong>Invite code:</strong> a random 6-character code created on your device, a friend's code if you type one, and whether the bonus cases are unlocked. No server checks it, and it is never sent anywhere unless you share it yourself.</li>
+<li><strong>Purchases:</strong> if you buy «The full police file», your device remembers it so the cases stay unlocked.</li>
 <li>Cases you add yourself in «My cases», if you use that feature.</li>
 <li><strong>Game history:</strong> after each game a summary is saved (case name, date, the player names you typed, their roles and scores) for the last 100 games, so you can see your history, stats and group titles. You can delete one game or the whole history from the «History» screen.</li>
 <li><strong>Detective ranks:</strong> worked out from this game history on your device only, and never sent anywhere.</li>
@@ -63,16 +65,21 @@ a{color:var(--gold)}
 <li>«Paste a case» reads the clipboard only when you tap it.</li>
 <li>«Suggest a case» opens WhatsApp with a message containing your idea (and your name and account if you typed them, so we can credit you on the case). The app itself sends and stores nothing; you are the one who taps send in WhatsApp.</li>
 </ul>
-<h2>Updates, notifications and statistics (Firebase)</h2>
+<h2>Updates, notifications, statistics and crash reports (Firebase)</h2>
 <p>We use Google Firebase services, with no ads and no accounts:</p>
 <ul>
 <li><strong>Update check (Remote Config):</strong> the app asks Firebase for the latest version so it can tell you when an update is available. Firebase uses an anonymous app installation ID (not linked to your name or number) and your IP address to serve the request.</li>
 <li><strong>Notifications (Cloud Messaging), optional and off by default:</strong> nothing happens unless you open «Notifications», turn the switch on and allow the notification permission. Firebase then gives your device an anonymous notification token so we can send you news about new cases. We do not link the token to any data about you. You can turn it off at any time from the same screen or from your phone's settings.</li>
 <li><strong>Anonymous statistics (Analytics), you can turn them off in Settings:</strong> we count fixed steps such as «first launch», «finished the tutorial case» and «finished a group game», and your answer to «Where did you hear about Mahkama?» if you answer. We never send player names, case text, secrets or anything you type. The advertising ID (Advertising ID / IDFA) is <strong>off</strong>, and there is no ad personalisation and no cross-app tracking. Firebase uses an anonymous installation ID and your IP address to aggregate the numbers. If you turn «Anonymous statistics» off, nothing is sent.</li>
 <li>The text of notifications you receive is stored on your device only, so you can see it on the «Notifications» screen.</li>
+<li><strong>Crash reports (Crashlytics), on by default and you can turn them off:</strong> if the app crashes, a technical report is sent so we can fix the problem: where in the code it failed, the device model and system version, the app version, and an anonymous installation ID. The report contains no player names, cases or roles. You can turn it off at any time in Settings («Crash reports»); unsent reports are then deleted and nothing new is sent.</li>
 </ul>
+<h2>New cases from the internet</h2>
+<p>When you are online, the app downloads new case files from our site on Firebase Hosting (a plain file request, like opening a web page: the server sees your IP address only to answer). No data about you or your games is sent. Downloaded cases are saved on your device so you can play them later without internet.</p>
+<h2>Store purchases</h2>
+<p>If you buy something in the app, payment is handled entirely by Google Play or the App Store with your account there. We never see your payment details; the app only learns that the purchase succeeded so it can unlock the cases.</p>
 <h2>Third parties</h2>
-<p>The app contains no advertising or tracking SDK. The only third parties are the Google Firebase services above (Remote Config, Cloud Messaging, and Analytics without the advertising ID).</p>
+<p>The app contains no advertising or tracking SDK. The only third parties are the Google Firebase services above (Remote Config, Cloud Messaging, Analytics without the advertising ID, Crashlytics and Hosting), and Google Play or the App Store if you buy something.</p>
 <h2>Children</h2>
 <p>We do not collect personal data from anyone, including children; the anonymous statistics contain nothing that identifies a person. The cases are fictional and contain no depicted violence.</p>
 <h2>Changes</h2>
@@ -85,13 +92,15 @@ a{color:var(--gold)}
 <h1>محكمة</h1>
 <p class="sub">مين المذنب؟ · MegTech</p>
 <h2>سياسة الخصوصية</h2>
-<p>آخر تحديث: 23 أكتوبر 2026</p>
+<p>آخر تحديث: 28 أكتوبر 2026</p>
 <h2>باختصار</h2>
-<p>«محكمة» لعبة تحقيق جماعية. التطبيق <strong>مش بيجمع أي بيانات شخصية</strong>، ومفيش حسابات ولا إعلانات ولا تتبّع. اللي بيتصل بالإنترنت: فحص التحديثات، والإشعارات الاختيارية، وإحصائيات مجهولة تقدر تقفلها (تفاصيلهم تحت).</p>
+<p>«محكمة» لعبة تحقيق جماعية. التطبيق <strong>مش بيجمع أي بيانات شخصية</strong>، ومفيش حسابات ولا إعلانات ولا تتبّع. اللي بيتصل بالإنترنت: فحص التحديثات، وتنزيل القضايا الجديدة، والإشعارات الاختيارية، وإحصائيات مجهولة وتقارير أعطال تقنية تقدر تقفلهم من الإعدادات، والشراء من المتجر لو اشتريت (تفاصيلهم تحت).</p>
 <h2>إيه اللي بيتخزّن على جهازك؟</h2>
 <p>كل اللي تحت بيتخزّن على جهازك بس، ومبيتبعتش لأي مكان:</p>
 <ul>
-<li>إعدادات التطبيق: شكل التطبيق (داكن/فاتح)، الصوت والاهتزاز، نظام اللعب الافتراضي، وقت الاستجواب، الخط الأكبر، إبقاء الشاشة شغالة، والقراءة الصوتية.</li>
+<li>إعدادات التطبيق: شكل التطبيق (داكن/فاتح)، الصوت والاهتزاز، نظام اللعب الافتراضي، وقت الاستجواب، الخط الأكبر، إبقاء الشاشة شغالة، القراءة الصوتية، واختيارك لتقارير الأعطال.</li>
+<li><strong>كود الدعوة:</strong> كود عشوائي من 6 حروف بيتعمل على جهازك، وكود صاحبك لو كتبته، وهل القضايا الهدية اتفتحت. مفيش سيرفر بيتأكد منه، ومبيتبعتش لأي مكان غير لما إنت تشاركه بنفسك.</li>
+<li><strong>المشتريات:</strong> لو اشتريت «ملف الشرطة الكامل»، جهازك بيفتكر إنك اشتريته علشان القضايا تفضل مفتوحة.</li>
 <li>القضايا اللي إنت بتضيفها بنفسك من «قضياك»، لو استخدمت الميزة دي.</li>
 <li><strong>سجل الألعاب:</strong> بعد كل لعبة بيتحفظ ملخصها (اسم القضية، والتاريخ، وأسماء اللاعبين اللي كتبتوها وأدوارهم ونقطهم) لآخر 100 لعبة، علشان تشوف تاريخك وإحصائياتك وألقاب الشلة. تقدر تمسح لعبة واحدة أو السجل كله من شاشة «السجل».</li>
 <li><strong>رتب المحققين:</strong> بتتحسب من سجل الألعاب ده على جهازك بس، ومبتتبعتش لأي مكان.</li>
@@ -123,16 +132,21 @@ a{color:var(--gold)}
 <li>«الصق قضية» بتقرا من الحافظة لما تدوس عليها بس.</li>
 <li>«اقترح قضية» بتفتح واتساب برسالة فيها فكرتك (واسمك وحسابك لو كتبتهم علشان نكتب اسمك على القضية). التطبيق نفسه مبيبعتش ولا بيحفظ حاجة، وإنت اللي بتدوس إرسال في واتساب.</li>
 </ul>
-<h2>التحديثات والإشعارات والإحصائيات (Firebase)</h2>
+<h2>التحديثات والإشعارات والإحصائيات وتقارير الأعطال (Firebase)</h2>
 <p>بنستخدم خدمات من Google Firebase، ومفيش فيهم إعلانات ولا حسابات:</p>
 <ul>
 <li><strong>فحص التحديثات (Remote Config):</strong> التطبيق بيسأل Firebase عن أحدث إصدار علشان ينبّهك لو في تحديث. Firebase بيستخدم معرّف تثبيت مجهول للتطبيق (مش مربوط باسمك ولا رقمك) وعنوان الـ IP لتنفيذ الطلب.</li>
 <li><strong>الإشعارات (Cloud Messaging) — اختيارية ومقفولة افتراضيًا:</strong> مش بيحصل أي حاجة غير لما تفتح «الإشعارات» وتشغّل الزرار وتوافق على إذن الإشعارات. ساعتها Firebase بيدّي جهازك رمز إشعارات (token) مجهول علشان نبعتلك إشعارات القضايا الجديدة. مبنربطش الرمز بأي بيانات عنك. تقدر تقفلها في أي وقت من نفس الشاشة أو من إعدادات الموبايل.</li>
 <li><strong>إحصائيات مجهولة (Analytics) — تقدر تقفلها من الإعدادات:</strong> بنعدّ خطوات ثابتة زي «فتح التطبيق لأول مرة» و«خلّص القضية التدريبية» و«خلّص لعبة جماعية»، وإجابتك على «عرفت محكمة منين؟» لو جاوبت. مبنبعتش أسماء اللاعبين ولا نص القضايا ولا الأسرار ولا أي حاجة بتكتبها. معرّف الإعلانات (Advertising ID / IDFA) <strong>مقفول</strong>، ومفيش تخصيص إعلانات ولا تتبّع بين التطبيقات. Firebase بيستخدم معرّف تثبيت مجهول وعنوان الـ IP لتجميع الأرقام. لو قفلت «إحصائيات مجهولة» مفيش حاجة بتتبعت.</li>
 <li>الإشعارات اللي بتوصلك بيتحفظ نصها على جهازك بس علشان تشوفها في شاشة «الإشعارات».</li>
+<li><strong>تقارير الأعطال (Crashlytics) — شغالة افتراضيًا وتقدر تقفلها:</strong> لو التطبيق وقع، بيتبعت تقرير تقني علشان نصلّح المشكلة: مكان العطل في الكود، نوع الجهاز ونظامه، إصدار التطبيق، ومعرّف تثبيت مجهول. التقرير مفيهوش أسماء اللاعبين ولا القضايا ولا الأدوار. تقدر تقفلها في أي وقت من الإعدادات («تقارير الأعطال»)، وساعتها التقارير اللي لسه ما اتبعتتش بتتمسح ومفيش جديد بيتبعت.</li>
 </ul>
+<h2>القضايا الجديدة من الإنترنت</h2>
+<p>لما يكون فيه نت، التطبيق بينزّل ملفات القضايا الجديدة من موقعنا على Firebase Hosting (طلب عادي لملف، زي فتح صفحة ويب: السيرفر بيشوف عنوان الـ IP علشان يرد بس). مفيش أي بيانات عنك أو عن ألعابك بتتبعت. القضايا اللي بتنزل بتتحفظ على جهازك، علشان تلعبها بعد كده من غير نت.</p>
+<h2>الشراء من المتجر</h2>
+<p>لو اشتريت حاجة جوه التطبيق، الدفع كله بيتم عن طريق Google Play أو App Store بحسابك عندهم. إحنا مبنشوفش بيانات الدفع؛ التطبيق بيعرف بس إن الشراء نجح علشان يفتح القضايا.</p>
 <h2>أطراف ثالثة</h2>
-<p>التطبيق مفيهوش أي SDK لإعلانات أو تتبع. الأطراف الوحيدة هي خدمات Google Firebase المذكورة فوق (Remote Config وCloud Messaging وAnalytics من غير معرّف الإعلانات).</p>
+<p>التطبيق مفيهوش أي SDK لإعلانات أو تتبع. الأطراف الوحيدة هي خدمات Google Firebase المذكورة فوق (Remote Config وCloud Messaging وAnalytics من غير معرّف الإعلانات وCrashlytics وHosting)، ومتجر Google Play أو App Store لو اشتريت.</p>
 <h2>الأطفال</h2>
 <p>مبنجمعش بيانات شخصية من أي حد، ومنهم الأطفال؛ الإحصائيات المجهولة مفيهاش أي بيانات تعرّف الشخص. القضايا خيالية ومفيهاش عنف مصوّر.</p>
 <h2>التغييرات</h2>
