@@ -25,9 +25,9 @@ a{color:var(--gold)}
 <h1>Mahkama</h1>
 <p class="sub">Who Did It? · MegTech</p>
 <h2>Privacy Policy</h2>
-<p>Last updated: 28 October 2026</p>
+<p>Last updated: 31 October 2026</p>
 <h2>In short</h2>
-<p>Mahkama is a party detective game. The app <strong>does not collect any personal data</strong>. There are no accounts, no ads and no tracking. What connects to the internet: the update check, downloading new cases, the optional notifications, anonymous statistics and technical crash reports that you can turn off in Settings, and store purchases if you buy something (details below).</p>
+<p>Mahkama is a party detective game. The app <strong>does not collect any personal data</strong>. There are no accounts, no ads and no tracking. What connects to the internet: the update check, downloading new cases, the optional notifications, the leaderboard if you choose to post your name on it, anonymous statistics and technical crash reports that you can turn off in Settings, and store purchases if you buy something (details below).</p>
 <h2>What is stored on your device?</h2>
 <p>Everything below is stored on your device only and is never sent anywhere:</p>
 <ul>
@@ -38,13 +38,14 @@ a{color:var(--gold)}
 <li><strong>Game history:</strong> after each game a summary is saved (case name, date, the player names you typed, their roles and scores) for the last 100 games, so you can see your history, stats and group titles. You can delete one game or the whole history from the «History» screen.</li>
 <li><strong>Detective ranks:</strong> worked out from this game history on your device only, and never sent anywhere.</li>
 <li><strong>«Case of the day» reminder:</strong> if you turn it on, your phone itself schedules a local notification at 8 pm. There is no server.</li>
+<li><strong>Daily challenge:</strong> your result for each day (points, time, number of questions and evidence), when you opened today's challenge, and your leaderboard name if you typed one.</li>
 <li><strong>Case ratings:</strong> if you tap thumbs up or down after a game, the vote count per case is saved on your device for the playtest report.</li>
 <li><strong>An unfinished game:</strong> so you can resume later, its place is saved on your device: the case, the names and the step you reached. On a single phone the secret role deal is saved too. It is deleted when the game ends or when you tap «Delete». In «Detective duo» only the case, names and step are saved, without the clues.</li>
 </ul>
 <p>During play, secret roles and answers stay in the app's memory (and in the saved game above if you leave before it ends).</p>
 <p>All of this data is deleted when you delete the app.</p>
 <h2>Permissions</h2>
-<p>The app does not ask for the camera, microphone, location, contacts or photos.</p>
+<p>The camera only when you tap «Scan the room code», to read the room code from your friend's phone; the image is read on your phone and is never saved or sent anywhere. The app does not ask for the microphone, location, contacts or photos.</p>
 <p>Only in «On the network» mode, iPhone asks for the «Local Network» permission and Android uses the network permission, so your phone can talk to your friends' phones on the same Wi-Fi.</p>
 <h2>Playing on the local network</h2>
 <ul>
@@ -52,6 +53,7 @@ a{color:var(--gold)}
 <li>The host phone runs the game. So you can resume if the app closes, only the host saves the room state on its own device (case, names and step, and the role deal in the regular game). Guest phones save nothing.</li>
 <li>It is deleted when the game ends or when the host taps «Delete».</li>
 <li>Anyone on the same network with the room code can join the room before the game starts, so only share the code with your friends.</li>
+<li>In «Each on their own phone», your phone shows each player's card on a page on your Wi-Fi through a private link (a QR code), and a card opens only on the first phone that opens it. These pages close when the verdict is shown or when you close the game, and nothing from them goes to the internet.</li>
 </ul>
 <h2>Read-aloud and headphones</h2>
 <ul>
@@ -74,14 +76,22 @@ a{color:var(--gold)}
 <li>The text of notifications you receive is stored on your device only, so you can see it on the «Notifications» screen.</li>
 <li><strong>Crash reports (Crashlytics), on by default and you can turn them off:</strong> if the app crashes, a technical report is sent so we can fix the problem: where in the code it failed, the device model and system version, the app version, and an anonymous installation ID. The report contains no player names, cases or roles. You can turn it off at any time in Settings («Crash reports»); unsent reports are then deleted and nothing new is sent.</li>
 </ul>
+<h2>Daily challenge and leaderboard (Firebase)</h2>
+<ul>
+<li>The daily challenge itself is played on your device without internet.</li>
+<li><strong>The leaderboard is optional:</strong> nothing leaves your device until you type a leaderboard name and tap «Post». After that, your results on the following days are posted automatically under the same name.</li>
+<li>What is sent: the name you chose for the leaderboard (it does not have to be your real name), the day's result (points, right or wrong, number of questions and evidence, and time) and the case number. Your name and total points are shown to all players on the leaderboard.</li>
+<li>So each player can post once a day, we use <strong>anonymous sign-in</strong> from Firebase Authentication: a random ID for your device with no e-mail, phone number or real name. The data is stored on Cloud Firestore (Google).</li>
+<li>To delete your name and results from the leaderboard, e-mail us at the address below with your leaderboard name.</li>
+</ul>
 <h2>New cases from the internet</h2>
 <p>When you are online, the app downloads new case files from our site on Firebase Hosting (a plain file request, like opening a web page: the server sees your IP address only to answer). No data about you or your games is sent. Downloaded cases are saved on your device so you can play them later without internet.</p>
 <h2>Store purchases</h2>
 <p>If you buy something in the app, payment is handled entirely by Google Play or the App Store with your account there. We never see your payment details; the app only learns that the purchase succeeded so it can unlock the cases.</p>
 <h2>Third parties</h2>
-<p>The app contains no advertising or tracking SDK. The only third parties are the Google Firebase services above (Remote Config, Cloud Messaging, Analytics without the advertising ID, Crashlytics and Hosting), and Google Play or the App Store if you buy something.</p>
+<p>The app contains no advertising or tracking SDK. The only third parties are the Google Firebase services above (Remote Config, Cloud Messaging, Analytics without the advertising ID, Crashlytics and Hosting, plus anonymous Authentication and Cloud Firestore for the leaderboard if you post on it), and Google Play or the App Store if you buy something.</p>
 <h2>Children</h2>
-<p>We do not collect personal data from anyone, including children; the anonymous statistics contain nothing that identifies a person. The cases are fictional and contain no depicted violence.</p>
+<p>We do not collect personal data from anyone, including children (the leaderboard name is chosen by the player and does not have to be their name); the anonymous statistics contain nothing that identifies a person. The cases are fictional and contain no depicted violence.</p>
 <h2>Changes</h2>
 <p>If we add online features, accounts or data collection in the future, we will update this policy and show it inside the app before those features are turned on.</p>
 <h2>Contact</h2>
@@ -92,9 +102,9 @@ a{color:var(--gold)}
 <h1>محكمة</h1>
 <p class="sub">مين المذنب؟ · MegTech</p>
 <h2>سياسة الخصوصية</h2>
-<p>آخر تحديث: 28 أكتوبر 2026</p>
+<p>آخر تحديث: 31 أكتوبر 2026</p>
 <h2>باختصار</h2>
-<p>«محكمة» لعبة تحقيق جماعية. التطبيق <strong>مش بيجمع أي بيانات شخصية</strong>، ومفيش حسابات ولا إعلانات ولا تتبّع. اللي بيتصل بالإنترنت: فحص التحديثات، وتنزيل القضايا الجديدة، والإشعارات الاختيارية، وإحصائيات مجهولة وتقارير أعطال تقنية تقدر تقفلهم من الإعدادات، والشراء من المتجر لو اشتريت (تفاصيلهم تحت).</p>
+<p>«محكمة» لعبة تحقيق جماعية. التطبيق <strong>مش بيجمع أي بيانات شخصية</strong>، ومفيش حسابات ولا إعلانات ولا تتبّع. اللي بيتصل بالإنترنت: فحص التحديثات، وتنزيل القضايا الجديدة، والإشعارات الاختيارية، ولوحة الشرف لو اخترت تنشر اسمك فيها، وإحصائيات مجهولة وتقارير أعطال تقنية تقدر تقفلهم من الإعدادات، والشراء من المتجر لو اشتريت (تفاصيلهم تحت).</p>
 <h2>إيه اللي بيتخزّن على جهازك؟</h2>
 <p>كل اللي تحت بيتخزّن على جهازك بس، ومبيتبعتش لأي مكان:</p>
 <ul>
@@ -105,13 +115,14 @@ a{color:var(--gold)}
 <li><strong>سجل الألعاب:</strong> بعد كل لعبة بيتحفظ ملخصها (اسم القضية، والتاريخ، وأسماء اللاعبين اللي كتبتوها وأدوارهم ونقطهم) لآخر 100 لعبة، علشان تشوف تاريخك وإحصائياتك وألقاب الشلة. تقدر تمسح لعبة واحدة أو السجل كله من شاشة «السجل».</li>
 <li><strong>رتب المحققين:</strong> بتتحسب من سجل الألعاب ده على جهازك بس، ومبتتبعتش لأي مكان.</li>
 <li><strong>تذكير «قضية اليوم»:</strong> لو شغّلته، الموبايل نفسه بيجدول إشعار محلي الساعة 8 بالليل. مفيش سيرفر.</li>
+<li><strong>تحدي اليوم:</strong> نتيجتك في كل يوم (النقط والوقت وعدد الأسئلة والأدلة)، وإمتى فتحت تحدي النهارده، واسم اللوحة لو كتبته.</li>
 <li><strong>تقييم القضايا:</strong> لو دوست إبهام فوق أو تحت بعد اللعبة، بيتحفظ عدد التقييمات لكل قضية على جهازك علشان تقرير التجارب.</li>
 <li><strong>اللعبة اللي لسه ما خلصتش:</strong> علشان تكمّلوها بعدين، بيتحفظ على جهازك مكانها: القضية والأسماء والخطوة اللي وصلتوا لها. في اللعب على موبايل واحد بيتحفظ كمان توزيع الأدوار السرّي. بيتمسح لما اللعبة تخلص أو لما تدوس «امسح». في «فريق محققين» بيتحفظ القضية والأسماء والخطوة بس، من غير الأدلة.</li>
 </ul>
 <p>أثناء اللعب، الأدوار السرّية والإجابات بتفضل في ذاكرة التطبيق (وفي اللعبة المحفوظة اللي فوق لو خرجتوا قبل ما تخلص).</p>
 <p>كل البيانات دي بتتمسح لما تمسح التطبيق.</p>
 <h2>الأذونات</h2>
-<p>التطبيق مبيطلبش كاميرا ولا ميكروفون ولا موقع ولا جهات اتصال ولا صور.</p>
+<p>الكاميرا بس لما تدوس «امسح كود الغرفة» علشان تصوّر كود الغرفة من موبايل صاحبك؛ الصورة بتتقري على موبايلك ومبتتحفظش ومبتطلعش منه. التطبيق مبيطلبش ميكروفون ولا موقع ولا جهات اتصال ولا صور.</p>
 <p>في وضع «على الشبكة» بس، iPhone بيسألك عن إذن «الشبكة المحلية»، وAndroid بيستخدم إذن الاتصال بالشبكة، علشان موبايلك يكلّم موبايلات أصحابك على نفس الـ Wi-Fi.</p>
 <h2>اللعب على الشبكة المحلية</h2>
 <ul>
@@ -119,6 +130,7 @@ a{color:var(--gold)}
 <li>موبايل المضيف هو اللي بيشغّل اللعبة. وعلشان تقدروا تكمّلوا لو التطبيق اتقفل، المضيف بس بيحفظ على جهازه حالة الغرفة (القضية والأسماء والخطوة، وتوزيع الأدوار في اللعبة العادية). موبايلات الضيوف مبتحفظش حاجة.</li>
 <li>بيتمسح لما اللعبة تخلص أو لما المضيف يدوس «امسح».</li>
 <li>أي حد على نفس الشبكة ومعاه كود الغرفة يقدر يدخل الغرفة قبل ما تبدأ اللعبة، فشاركوا الكود مع أصحابكم بس.</li>
+<li>في «كل واحد على موبايله» موبايلك بيعرض كارت كل لاعب على صفحة على الـ Wi-Fi بتاعكم بلينك خاص بيه (كود QR)، والكارت بيتفتح على أول موبايل يفتحه بس. الصفحات دي بتتقفل لما الحكم يظهر أو تقفلوا اللعبة، ومفيش حاجة منها بتروح على الإنترنت.</li>
 </ul>
 <h2>القراءة الصوتية والسماعات</h2>
 <ul>
@@ -141,14 +153,22 @@ a{color:var(--gold)}
 <li>الإشعارات اللي بتوصلك بيتحفظ نصها على جهازك بس علشان تشوفها في شاشة «الإشعارات».</li>
 <li><strong>تقارير الأعطال (Crashlytics) — شغالة افتراضيًا وتقدر تقفلها:</strong> لو التطبيق وقع، بيتبعت تقرير تقني علشان نصلّح المشكلة: مكان العطل في الكود، نوع الجهاز ونظامه، إصدار التطبيق، ومعرّف تثبيت مجهول. التقرير مفيهوش أسماء اللاعبين ولا القضايا ولا الأدوار. تقدر تقفلها في أي وقت من الإعدادات («تقارير الأعطال»)، وساعتها التقارير اللي لسه ما اتبعتتش بتتمسح ومفيش جديد بيتبعت.</li>
 </ul>
+<h2>تحدي اليوم ولوحة الشرف (Firebase)</h2>
+<ul>
+<li>تحدي اليوم نفسه بيتلعب على جهازك من غير نت.</li>
+<li><strong>لوحة الشرف اختيارية:</strong> مفيش حاجة بتطلع من جهازك غير لما تكتب اسم للوحة وتدوس «انشر». بعد كده نتايج الأيام الجاية بتتنشر لوحدها بنفس الاسم.</li>
+<li>اللي بيتبعت: الاسم اللي إنت اخترته للوحة (مش لازم يكون اسمك الحقيقي)، ونتيجة اليوم (النقط، صح ولا غلط، عدد الأسئلة والأدلة، والوقت)، ورقم القضية. والاسم ومجموع نقطك بيظهروا لكل اللاعبين في اللوحة.</li>
+<li>علشان كل لاعب ينشر مرة واحدة في اليوم، بنستخدم <strong>تسجيل دخول مجهول</strong> من Firebase Authentication: معرّف عشوائي لجهازك من غير إيميل ولا رقم ولا اسم حقيقي. البيانات بتتخزن على Cloud Firestore (Google).</li>
+<li>لو عايز تمسح اسمك ونتايجك من اللوحة، ابعتلنا على الإيميل اللي تحت باسم اللوحة.</li>
+</ul>
 <h2>القضايا الجديدة من الإنترنت</h2>
 <p>لما يكون فيه نت، التطبيق بينزّل ملفات القضايا الجديدة من موقعنا على Firebase Hosting (طلب عادي لملف، زي فتح صفحة ويب: السيرفر بيشوف عنوان الـ IP علشان يرد بس). مفيش أي بيانات عنك أو عن ألعابك بتتبعت. القضايا اللي بتنزل بتتحفظ على جهازك، علشان تلعبها بعد كده من غير نت.</p>
 <h2>الشراء من المتجر</h2>
 <p>لو اشتريت حاجة جوه التطبيق، الدفع كله بيتم عن طريق Google Play أو App Store بحسابك عندهم. إحنا مبنشوفش بيانات الدفع؛ التطبيق بيعرف بس إن الشراء نجح علشان يفتح القضايا.</p>
 <h2>أطراف ثالثة</h2>
-<p>التطبيق مفيهوش أي SDK لإعلانات أو تتبع. الأطراف الوحيدة هي خدمات Google Firebase المذكورة فوق (Remote Config وCloud Messaging وAnalytics من غير معرّف الإعلانات وCrashlytics وHosting)، ومتجر Google Play أو App Store لو اشتريت.</p>
+<p>التطبيق مفيهوش أي SDK لإعلانات أو تتبع. الأطراف الوحيدة هي خدمات Google Firebase المذكورة فوق (Remote Config وCloud Messaging وAnalytics من غير معرّف الإعلانات وCrashlytics وHosting، وAuthentication المجهول وCloud Firestore للوحة الشرف لو نشرت فيها)، ومتجر Google Play أو App Store لو اشتريت.</p>
 <h2>الأطفال</h2>
-<p>مبنجمعش بيانات شخصية من أي حد، ومنهم الأطفال؛ الإحصائيات المجهولة مفيهاش أي بيانات تعرّف الشخص. القضايا خيالية ومفيهاش عنف مصوّر.</p>
+<p>مبنجمعش بيانات شخصية من أي حد، ومنهم الأطفال (اسم لوحة الشرف بيختاره اللاعب ومش لازم يكون اسمه)؛ الإحصائيات المجهولة مفيهاش أي بيانات تعرّف الشخص. القضايا خيالية ومفيهاش عنف مصوّر.</p>
 <h2>التغييرات</h2>
 <p>لو أضفنا ميزات أونلاين أو حسابات أو جمع بيانات مستقبلًا، هنحدّث السياسة دي ونعرضها جوّه التطبيق قبل ما الميزات تشتغل.</p>
 <h2>التواصل</h2>
